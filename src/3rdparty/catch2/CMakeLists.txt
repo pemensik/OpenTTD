@@ -42,7 +42,9 @@ project(Catch2
 
 #include(CatchMiscFunctions)
 
-set(SOURCES_DIR ${CMAKE_SOURCE_DIR})
+set(SOURCES_DIR ${CMAKE_CURRENT_SOURCE_DIR})
+set(PROJECT_BINARY_DIR ${CMAKE_CURRENT_BINARY_DIR})
+set(CATCH_CONFIG_CONSOLE_WIDTH 80)
 
 # CMake derives a Visual Studio project GUID from the file path but can be overridden via a property
 # (see https://gitlab.kitware.com/cmake/cmake/-/commit/c85367f4).  Using a non-constant GUID
@@ -384,7 +386,7 @@ source_group("generated headers"
 )
 
 add_library(Catch2 ${ALL_FILES})
-add_build_reproducibility_settings(Catch2)
+#add_build_reproducibility_settings(Catch2)
 add_library(Catch2::Catch2 ALIAS Catch2)
 
 if (ANDROID)
@@ -437,7 +439,7 @@ target_include_directories(Catch2
 add_library(Catch2WithMain
     ${SOURCES_DIR}/internal/catch_main.cpp
 )
-add_build_reproducibility_settings(Catch2WithMain)
+#add_build_reproducibility_settings(Catch2WithMain)
 add_library(Catch2::Catch2WithMain ALIAS Catch2WithMain)
 target_link_libraries(Catch2WithMain PUBLIC Catch2)
 set_target_properties(Catch2WithMain
