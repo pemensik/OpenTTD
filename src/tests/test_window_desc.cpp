@@ -9,7 +9,8 @@
 
 #include "../stdafx.h"
 
-#include "../3rdparty/catch2/catch.hpp"
+#include "../3rdparty/catch2/catch_test_macros.hpp"
+#include "../3rdparty/catch2/generators/catch_generators_range.hpp"
 
 #include "../window_gui.h"
 
