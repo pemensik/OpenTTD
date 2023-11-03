@@ -9,6 +9,5 @@
 
 #include "../stdafx.h"
 
-#define CATCH_CONFIG_MAIN
 #define DO_NOT_USE_WMAIN
-#include "../3rdparty/catch2/catch_all.hpp"
+#include "../3rdparty/catch2/catch_test_macros.hpp"

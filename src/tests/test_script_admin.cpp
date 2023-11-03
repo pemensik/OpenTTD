@@ -9,7 +9,7 @@
 
 #include "../stdafx.h"
 
-#include "../3rdparty/catch2/catch_all.hpp"
+#include "../3rdparty/catch2/catch_test_macros.hpp"
 
 #include "../game/game_instance.hpp"
 #include "../script/api/script_admin.hpp"
