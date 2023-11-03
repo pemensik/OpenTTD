@@ -289,6 +289,7 @@ target_link_libraries(openttd
 
 target_link_libraries(openttd_test PRIVATE openttd_lib)
 include(Catch)
+target_link_libraries(openttd_test PRIVATE Catch2::Catch2WithMain)
 catch_discover_tests(openttd_test)
 
 if(HAIKU)

@@ -43,8 +43,10 @@ project(Catch2
 #include(CatchMiscFunctions)
 
 set(SOURCES_DIR ${CMAKE_CURRENT_SOURCE_DIR})
-set(PROJECT_BINARY_DIR ${CMAKE_CURRENT_BINARY_DIR})
-set(CATCH_CONFIG_CONSOLE_WIDTH 80)
+#set(PROJECT_BINARY_DIR ${CMAKE_BINARY_DIR})
+if (NOT DEFINED(CATCH_CONFIG_CONSOLE_WIDTH))
+  set(CATCH_CONFIG_CONSOLE_WIDTH 80)
+endif()
 
 # CMake derives a Visual Studio project GUID from the file path but can be overridden via a property
 # (see https://gitlab.kitware.com/cmake/cmake/-/commit/c85367f4).  Using a non-constant GUID

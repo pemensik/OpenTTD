@@ -9,7 +9,7 @@
 
 #include "../stdafx.h"
 
-#include "../3rdparty/catch2/catch.hpp"
+#include "../3rdparty/catch2/catch_all.hpp"
 
 #include "../strings_func.h"
 
