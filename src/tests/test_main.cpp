@@ -11,3 +11,7 @@
 
 #define DO_NOT_USE_WMAIN
 #include "../3rdparty/catch2/catch_test_macros.hpp"
+#include "../3rdparty/catch2/reporters/catch_reporter_registrars.hpp"
+#include "../3rdparty/catch2/reporters/catch_reporter_console.hpp"
+
+CATCH_REGISTER_REPORTER("", Catch::ConsoleReporter);
